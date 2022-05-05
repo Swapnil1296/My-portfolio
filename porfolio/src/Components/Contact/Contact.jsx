@@ -96,7 +96,7 @@ const Contact = () => {
       </div>
       <div style={{background: `${newTheme.line}`}} className={styles.line} />
       <div style={{color: `${newTheme.para}`}} className={styles.copyright}>
-        Designed and build by Swapnil Landage, 2022 All rights reserved.
+        Designed and build by Rahul G., 2022 All rights reserved.
       </div>
     </footer>
   );
