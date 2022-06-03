@@ -1,5 +1,25 @@
 export const projects = [
   {
+    img: "https://github.com/Swapnil1296/portfolio_images/blob/main/meesho/landingpage.png?raw=true",
+    title: "Meesho App",
+    des: "Meesho is an e-commerce Indian website of wide range of apparel, cosmetics, household items, and many more categories",
+    demo: "",
+    live: "https://meesho-clone-xi.vercel.app/",
+    gitHub: "https://github.com/Swapnil1296/Meesho-",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Redux",
+      "Material UI",
+      "MongoDB",
+      "Express.js",
+      "Node.js",
+      "NPM packeges - Dotenv, jsonwebtoken , bcryptjs",
+    ],
+  },
+  {
     img: "https://github.com/Swapnil1296/portfolio_images/blob/main/creado/Landing%20page.png?raw=true",
     title: "Creadobeauty",
     des: "CredoBeauty is an E-commerce platform,Where they are building a destination where one can find the most comprehensive collection of the most beautiful, safe and effective beauty products in the world. In this project we have tried to make a look alike clone of CredoBeauty. With our efforts and the technology stack, that we have learned so far in the masai school, we were able to clone the front end with high precision and quality.",

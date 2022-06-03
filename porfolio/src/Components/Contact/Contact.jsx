@@ -4,6 +4,8 @@ import styles from "./Contact.module.css";
 
 const Contact = () => {
   const { newTheme } = React.useContext(ThemeContext);
+  const date = new Date(Date.now())
+  
   return (
     <footer
       className={styles.footer}
@@ -31,7 +33,7 @@ const Contact = () => {
               textDecoration: `underline`,
             }}
           >
-           7385476339
+            7385476339
           </span>
           {"\u00A0"}
           {"\u00A0"}
@@ -96,7 +98,7 @@ const Contact = () => {
       </div>
       <div style={{background: `${newTheme.line}`}} className={styles.line} />
       <div style={{color: `${newTheme.para}`}} className={styles.copyright}>
-        Designed and build by Rahul G., 2022 All rights reserved.
+        Designed and build by Swapnil Landage,  All rights reserved.
       </div>
     </footer>
   );
