@@ -100,7 +100,7 @@ const Home = ({ scrollRef }) => {
           className={styles.profileImage}
         >
           <img
-            src="https://github.com/Swapnil1296/portfolio_images/blob/main/images/chess%20white%20(4).png?raw=true"
+            src="https://github.com/Swapnil1296/portfolio_images/blob/main/images/profile-pic%20(1).png?raw=true"
             alt="Profile pic"
           />
         </div>

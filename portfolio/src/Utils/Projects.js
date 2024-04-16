@@ -1,5 +1,44 @@
 export const projects = [
   {
+    img: "https://github.com/Swapnil1296/portfolio_images/blob/main/images/c2c.png?raw=true",
+    title: "Connect2Clinic",
+    des: "Connect2Clinic, an exceptional digital initiative pioneered by Alkem Labs, is dedicated to transforming the management of healthcare practices. As a subsidiary of Alkem Labs, the project's unwavering goal is to carry forward the company’s rich tradition of excellence and unwavering dedication to healthcare. This cutting-edge platform stands as an AI-driven, comprehensive solution that not only streamlines and elevates the patient experience but also empowers healthcare providers with state-of-the-art tools and technologies.",
+    demo: "https://www.connect2clinic.com",
+    gitHub: "",
+    technologies: [
+      "JavaScript",
+      "React",
+      "Redux-toolkit",
+      "TailwindCSS",
+      "BitBucket",
+      "JIRA",
+      "AWS",
+    ],
+    company: "Indus Net Technologies",
+    duration: "1 year 1 months",
+  },
+  {
+    img: "https://github.com/Swapnil1296/portfolio_images/blob/main/images/Screenshot%202024-04-15%20174029.png?raw=true",
+    title: "Alkem Market Place",
+    des: "Alkem Market Place, owned by Alkem Labs, is an online platform simplifying the ordering of in-stock medicines. Designed for ease, it offers a seamless ordering experience for both healthcare providers and patients. With real-time stock updates and a user-friendly interface, it ensures timely and reliable delivery, reflecting Alkem's commitment to modernizing healthcare.",
+    demo: "https://alkemmarketplace.in/",
+    gitHub: "",
+    technologies: [
+      "JavaScript",
+      "React",
+      "Redux-toolkit",
+      "React-Bootstrap",
+      "BitBucket",
+      "NodeJs",
+      "PostgreSQL",
+      "ExpressJs",
+      "AWS",
+    ],
+    company: "Indus Net Technologies",
+    duration: "On Going",
+  },
+
+  {
     img: "https://github.com/Swapnil1296/portfolio_images/blob/main/meesho/landingpage.png?raw=true",
     title: "Meesho App",
     des: "Meesho is an e-commerce Indian website of wide range of apparel, cosmetics, household items, and many more categories",
@@ -18,6 +57,8 @@ export const projects = [
       "Node.js",
       "NPM packeges - Dotenv, jsonwebtoken , bcryptjs",
     ],
+    company: "Independent Developer",
+    duration: "",
   },
   {
     img: "https://github.com/Swapnil1296/portfolio_images/blob/main/creado/Landing%20page.png?raw=true",
@@ -27,6 +68,8 @@ export const projects = [
     live: "https://luxury-otter-de9ba2.netlify.app/",
     gitHub: "https://github.com/Swapnil1296/creado",
     technologies: ["HTML", "CSS", "JavaScript", "Localstorage", "Bootstrap"],
+    company: "Independent Developer",
+    duration: "",
   },
   {
     img: "https://github.com/Swapnil1296/portfolio_images/blob/main/Groww/Landing%20page.png?raw=true",
@@ -44,15 +87,7 @@ export const projects = [
       "MongoDB",
       "Mongoose",
     ],
-  },
-
-  {
-    img: "https://github.com/Swapnil1296/Weather-app/blob/main/preview/userpage.png?raw=true",
-    title: "Weather App",
-    des: "Weather is a mini project i did during my contruct week at masat school. Using this app users can search accurate weather of their location with map to their location..",
-    demo: "",
-    live: "https://stately-eclair-161047.netlify.app/",
-    gitHub: "https://github.com/Swapnil1296/Weather-app",
-    technologies: ["HTML", "CSS", "JavaScript", "API"],
+    company: "Independent Developer",
+    duration: "",
   },
 ];

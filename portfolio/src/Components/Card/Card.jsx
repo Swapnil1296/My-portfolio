@@ -8,7 +8,8 @@ import Dialog from "@material-ui/core/Dialog";
 const Card = (props) => {
   const [state, setState] = useState(false);
   const { newTheme } = React.useContext(ThemeContext);
-  const { img, des, title, live, gitHub, technologies } = props;
+  const { img, des, title, live, gitHub, technologies, company, duration } =
+    props;
 
   const [width] = WindowSize();
 
@@ -55,6 +56,7 @@ const Card = (props) => {
             )}
             <p style={{ color: `${newTheme.para}` }}>{des}</p>
             <div>
+              <span> TechStack:-</span>
               {technologies.map((technology, index) => (
                 <span
                   key={index}
@@ -63,9 +65,35 @@ const Card = (props) => {
                     color: `${newTheme.title}`,
                   }}
                 >
-                  {technology}
+                  {technology},
                 </span>
               ))}
+            </div>
+            <div style={{ marginTop: "5px" }}>
+              <span>Affiliation:-</span>
+
+              <span
+                style={{
+                  marginLeft: "20px",
+                  color: `${newTheme.title}`,
+                }}
+              >
+                {" "}
+                {company && company}
+              </span>
+            </div>
+            <div style={{ marginTop: "5px" }}>
+              <span>Duration Spent:-</span>
+
+              <span
+                style={{
+                  marginLeft: "20px",
+                  color: `${newTheme.title}`,
+                }}
+              >
+                {" "}
+                {duration && duration}
+              </span>
             </div>
           </div>
 
