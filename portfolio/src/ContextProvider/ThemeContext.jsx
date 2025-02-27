@@ -1,5 +1,5 @@
-import React, { createContext, useEffect } from 'react';
-import { theme } from '../Utils/themes';
+import React, { createContext, useEffect } from "react";
+import { theme } from "../Utils/themes";
 // import { currentTime } from '../Utils/Time';
 
 // const getTheme = () => {
@@ -12,32 +12,30 @@ import { theme } from '../Utils/themes';
 // 	}
 // 	return mode;
 // };
-const getMode = JSON.parse(localStorage.getItem('theme')) || 'dark';
+const getMode = JSON.parse(localStorage?.getItem("theme")) || "dark";
 export const ThemeContext = createContext();
 
 const ThemeContextProvider = ({ children }) => {
-	const [mode, setMode] = React.useState(getMode);
-	const [open, setOpen] = React.useState(true);
+  const [mode, setMode] = React.useState(getMode);
+  const [open, setOpen] = React.useState(true);
 
-	const handleMode = () => {
-		setMode(mode === 'dark' ? 'light' : 'dark');
-	};
+  const handleMode = () => {
+    setMode(mode === "dark" ? "light" : "dark");
+  };
 
-	useEffect(() => {
-		localStorage.setItem('theme', JSON.stringify(mode));
-	}, [mode]);
-	const handleMenu = () => {
-		setOpen(!open);
-	};
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(mode));
+  }, [mode]);
+  const handleMenu = () => {
+    setOpen(!open);
+  };
 
-	const newTheme = theme[mode];
+  const newTheme = theme[mode];
 
-	const value = { mode, newTheme, handleMode, open, handleMenu };
-	return (
-		<ThemeContext.Provider value={value}>
-			{children}
-		</ThemeContext.Provider>
-	);
+  const value = { mode, newTheme, handleMode, open, handleMenu };
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
 };
 
 export { ThemeContextProvider };
