@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-const Projects = ({ darkMode }) => {
+const ProfessionalProjects = ({ darkMode }) => {
   const [hoveredId, setHoveredId] = useState(null);
 
   const projects = [
@@ -53,12 +53,12 @@ const Projects = ({ darkMode }) => {
     },
     {
       id: 4,
-      title: "Meesho clone App",
+      title: "Ageas Federal Insurance",
       description:
-        "A full-stack e-commerce platform with payment processing, user authentication, and admin dashboard.",
-      image: "meesho.png",
-      technologies: ["Python", "TensorFlow", "Flask", "React", "AWS"],
-      link: "https://meesho-clone-xi.vercel.app/",
+        "Ageas Federal Life Insurance (AFLI) is one of India’s prominent life insurance companies that strives towards creating value for its stakeholders. We are a joint venture between Ageas, an international insurance giant based out of Europe and Federal Bank, one of India’s leading private sector banks.",
+      image: "ageas.png",
+      technologies: ["PHP", "Laravel", "NextJS", "ReactJS", "AzureCloud", "CI/CD", "strapi"],
+      link: "https://www.ageasfederal.com/",
       github: "https://github.com/Swapnil1296/Meesho-",
     },
   ];
@@ -73,11 +73,10 @@ const Projects = ({ darkMode }) => {
         className="text-center mb-16"
       >
         <h2
-          className={`inline-block text-3xl font-bold pb-2 border-b-4 ${
-            darkMode ? "border-blue-400" : "border-blue-600"
-          }`}
+          className={`inline-block text-3xl font-bold pb-2 border-b-4 ${darkMode ? "border-blue-400" : "border-blue-600"
+            }`}
         >
-          Featured Projects
+          Professional Projects
         </h2>
       </motion.div>
 
@@ -89,9 +88,8 @@ const Projects = ({ darkMode }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className={`rounded-lg shadow-lg overflow-hidden ${
-              darkMode ? "bg-gray-800" : "bg-white"
-            }`}
+            className={`rounded-lg shadow-lg overflow-hidden ${darkMode ? "bg-gray-800" : "bg-white"
+              }`}
             onMouseEnter={() => setHoveredId(project.id)}
             onMouseLeave={() => setHoveredId(null)}
           >
@@ -123,11 +121,10 @@ const Projects = ({ darkMode }) => {
                 {project.technologies.map((tech, idx) => (
                   <span
                     key={idx}
-                    className={`px-2 py-1 rounded-full text-xs ${
-                      darkMode
-                        ? "bg-gray-700 text-blue-300"
-                        : "bg-blue-100 text-blue-800"
-                    }`}
+                    className={`px-2 py-1 rounded-full text-xs ${darkMode
+                      ? "bg-gray-700 text-blue-300"
+                      : "bg-blue-100 text-blue-800"
+                      }`}
                   >
                     {tech}
                   </span>
@@ -141,28 +138,14 @@ const Projects = ({ darkMode }) => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`px-4 py-2 rounded-md text-sm font-medium ${
-                    darkMode
-                      ? "bg-blue-500 hover:bg-blue-600 text-white"
-                      : "bg-blue-600 hover:bg-blue-700 text-white"
-                  }`}
+                  className={`px-4 py-2 rounded-md text-sm font-medium ${darkMode
+                    ? "bg-blue-500 hover:bg-blue-600 text-white"
+                    : "bg-blue-600 hover:bg-blue-700 text-white"
+                    }`}
                 >
                   View Live
                 </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`px-4 py-2 rounded-md text-sm font-medium ${
-                    darkMode
-                      ? "bg-gray-700 hover:bg-gray-600 text-white"
-                      : "bg-gray-200 hover:bg-gray-300 text-gray-800"
-                  }`}
-                >
-                  View Code
-                </motion.a>
+
               </div>
             </div>
           </motion.div>
@@ -172,5 +155,5 @@ const Projects = ({ darkMode }) => {
   );
 };
 
-export default Projects;
-// components/Footer.jsx
+export default ProfessionalProjects;
+

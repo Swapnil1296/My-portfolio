@@ -59,7 +59,7 @@ const Header = ({ darkMode, scrollPosition }) => {
                 key={item.id}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className={`text-sm font-medium transition-colors duration-300 ${
+                className={`text-sm font-medium transition-colors duration-300 hover:cursor-pointer ${
                   darkMode ? "hover:text-blue-400" : "hover:text-blue-600"
                 }`}
                 onClick={() => scrollToSection(item.id)}

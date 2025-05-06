@@ -5,12 +5,13 @@ import Header from "./components/Header";
 import Introduction from "./components/Introduction";
 import Proficiencies from "./components/Proficiencies";
 import Experience from "./components/Experience";
-import Projects from "./components/Projects";
+import ProfessionalProjects from "./components/ProfessionalProjects";
 import UpcomingProjects from "./components/UpcomingProjects";
 import SocialLinks from "./components/SocialLinks";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ThemeToggle from "./components/ThemeToggle";
+import PersonalProjects from "./components/PersonalProjects";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -33,8 +34,8 @@ function App() {
   };
 
   return (
-    <div
-      className={`min-h-screen transition-colors duration-300 ${
+    <div 
+      className={`min-h-screen transition-colors duration-300 font-mono ${
         darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"
       }`}
     >
@@ -55,7 +56,8 @@ function App() {
             <Introduction darkMode={darkMode} />
             <Proficiencies darkMode={darkMode} />
             <Experience darkMode={darkMode} />
-            <Projects darkMode={darkMode} />
+            <ProfessionalProjects darkMode={darkMode} />
+            <PersonalProjects darkMode={darkMode} />
             <UpcomingProjects darkMode={darkMode} />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-24">
               <SocialLinks darkMode={darkMode} />

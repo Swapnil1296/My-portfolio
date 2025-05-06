@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const Experience = ({ darkMode }) => {
   const [activeTab, setActiveTab] = useState(0);
+  const [prevTab, setPrevTab] = useState(0);
+  const tabsRef = useRef([]);
 
   const experiences = [
     {
@@ -51,9 +53,25 @@ const Experience = ({ darkMode }) => {
       technologies: ["HTML5", "CSS3", "JavaScript", "React"],
     },
   ];
+  const handleActiveTab = (index) => {
+    setPrevTab(activeTab);
+    setActiveTab(index);
+  };
+  useEffect(() => {
+    let index = 0;
+    const length = experiences.length;
+
+    const interval = setInterval(() => {
+      handleActiveTab(index);
+      index = (index + 1) % length;
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
 
   return (
-    <section id="experience" className="pt-20 pb-16">
+    <section id="experience" className="pt-20 pb-16 ">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -71,25 +89,34 @@ const Experience = ({ darkMode }) => {
       </motion.div>
 
       <div className="max-w-4xl mx-auto">
-        <div className="flex overflow-x-auto mb-8 pb-2">
+        <div className="relative flex space-x-2 overflow-x-auto mb-8 pb-2">
+          {/* Tail effect */}
+          <motion.div
+            className="absolute h-full bg-blue-500 rounded-md z-0"
+            initial={false}
+            animate={{
+              left: tabsRef.current[activeTab]?.offsetLeft || 0,
+              width: tabsRef.current[activeTab]?.offsetWidth || 0,
+            }}
+            transition={{ type: "spring", stiffness: 500, damping: 30 }}
+          />
+
           {experiences.map((experience, index) => (
             <button
               key={index}
-              onClick={() => setActiveTab(index)}
-              className={`px-4 py-2 text-sm font-medium whitespace-nowrap mr-2 rounded-md transition-colors duration-300 ${
-                activeTab === index
-                  ? darkMode
-                    ? "bg-blue-500 text-white"
-                    : "bg-blue-600 text-white"
-                  : darkMode
-                  ? "bg-gray-800 hover:bg-gray-700"
-                  : "bg-gray-200 hover:bg-gray-300"
-              }`}
+              ref={(el) => (tabsRef.current[index] = el)}
+              onClick={() => handleActiveTab(index)}
+              className={`relative z-10 px-4 py-2 text-sm font-medium rounded-md transition-all duration-300 ${activeTab === index
+                ? "text-white"
+                : "text-gray-400 hover:text-white"
+                }`}
             >
               {experience.company}
             </button>
           ))}
         </div>
+
+
 
         <motion.div
           key={activeTab}

@@ -6,15 +6,17 @@ const Proficiencies = ({ darkMode }) => {
     {
       category: "Frontend",
       items: [
-        "React",
-        "Next",
-        "Redux",
-        "formik",
+        "ReactJS",
+        "NextJS",
+        "ReduxJS",
+
         "JavaScript",
         "TypeScript",
         "HTML5",
         "CSS3",
         "Tailwind CSS",
+        "MaterialUI",
+        "BootStrap",
         "SASS/SCSS",
       ],
       icon: "🎨",
@@ -34,6 +36,11 @@ const Proficiencies = ({ darkMode }) => {
       items: ["Git", "Docker", "AWS", "Jest", "Webpack", "Vite"],
       icon: "🛠️",
     },
+    {
+      category: "Frameworks/Tools",
+      items: ["Strapi", "Formik", "Redux Toolkit", "Joi", "Zod"],
+      icon: "🧩",
+    }
   ];
 
   const container = {
